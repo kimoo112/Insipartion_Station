@@ -21,15 +21,22 @@ class DarkAndLight extends StatefulWidget {
 class _DarkAndLightState extends State<DarkAndLight> {
   bool isDarkModeEnabled = true;
 
+  saveTheme() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setBool('isDarkMode', isDarkModeEnabled);
+  }
+
   saveInitial() async {
     final prefs = await SharedPreferences.getInstance();
-    bool? initial = prefs.getBool('switch');
+    setState(() {
+      bool? initial = prefs.getBool('isDarkMode');
 
-    if (initial == null) {
-      isDarkModeEnabled = true;
-    } else {
-      isDarkModeEnabled = initial;
-    }
+      if (initial == null) {
+        isDarkModeEnabled = true;
+      } else {
+        isDarkModeEnabled = initial;
+      }
+    });
   }
 
   @override
@@ -48,10 +55,9 @@ class _DarkAndLightState extends State<DarkAndLight> {
             nightBackgroundColor: cPrimary,
             isDarkModeEnabled: isDarkModeEnabled,
             onStateChanged: (isChecked) async {
-              final prefs = await SharedPreferences.getInstance();
               setState(() {
                 isDarkModeEnabled = isChecked;
-                prefs.setBool('switch', isChecked);
+                saveTheme();
               });
 
               if (isChecked) {

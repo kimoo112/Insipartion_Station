@@ -11,16 +11,14 @@ import '../Widgets/home_list_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
-
   @override
   State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
-  bool switcher = false;
   final formKey = GlobalKey<FormState>();
-
   List<NoteModel>? notes;
+
   @override
   void initState() {
     BlocProvider.of<NotesCubit>(context).fetchData();
@@ -53,11 +51,9 @@ class _HomeViewState extends State<HomeView> {
           size: 22.sp,
         ),
       ),
-      body: Column(
-        children: [
-          SizedBox(height: 40.h),
-          const Expanded(child: HomeListView()),
-        ],
+      body: Padding(
+        padding: EdgeInsets.only(top: 40.h),
+        child: const HomeListView(),
       ),
     );
   }

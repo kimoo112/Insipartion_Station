@@ -25,13 +25,15 @@ class TextFieldWi extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(10),
       child: TextFormField(
+        
         scrollPadding: EdgeInsets.all(55),
         autovalidateMode: autovalidateMode,
         maxLines: maxlines ?? 1,
         style: TextStyle(fontFamily: "Poppins", fontSize: 16),
 onSaved:onsaved ,
         autofocus: false,
-        validator: (value) {
+        validator:
+         (value) {
           if (value!.isEmpty) {
             return "You should type thing not make it empty";
           } else {
@@ -42,6 +44,8 @@ onSaved:onsaved ,
         textInputAction: TextInputAction.next,
         decoration: InputDecoration(
           disabledBorder: InputBorder.none,
+
+          
 
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
