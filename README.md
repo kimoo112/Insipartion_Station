@@ -1,16 +1,11 @@
-# notes
+# INSPIRATION STATION
 
 A new Flutter project.
 
-## Getting Started
+Inspiration Station is a note-taking app that helps you capture your thoughts, ideas, and inspiration. With Inspiration Station, you can easily create notes.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+![Logo](https://github.com/kimoo112/Insipartion_Station/assets/130873071/8db3138e-f6ca-4538-9c13-7d2c739ae2c9)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![design](https://github.com/kimoo112/Insipartion_Station/assets/130873071/b03af135-eae3-4b4e-8596-2c8673f3464a)
